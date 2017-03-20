@@ -32,7 +32,7 @@ public class Kontakti {
     private String tAddress;
 
     @DatabaseField(columnName = TABLE_TELEFON_NUMBER)
-    private Integer tNumber;
+    private String tNumber;
 
     @ForeignCollectionField(columnName = Kontakti.TABLE_TELEFON_TELEFON, eager = true)
     private ForeignCollection<Telefon> telefoni;
@@ -52,7 +52,7 @@ public class Kontakti {
         return tAddress;
     }
 
-    public Integer gettNumber() {
+    public String gettNumber() {
         return tNumber;
     }
 
@@ -72,7 +72,7 @@ public class Kontakti {
         this.tAddress = tAddress;
     }
 
-    public void settNumber(Integer tNumber) {
+    public void settNumber(String tNumber) {
         this.tNumber = tNumber;
     }
 

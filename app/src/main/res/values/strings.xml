@@ -7,4 +7,5 @@
     <string name="dialog_about_yes">OK</string>
     <string name="dialog_about_no">Cancel</string>
     <string name="ok">ok</string>
+    <string name="fragment_detal_action_add">Add</string>
 </resources>

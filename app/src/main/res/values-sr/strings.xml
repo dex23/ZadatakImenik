@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zadatak Imenik</string>
+    <string name="action_settings">Podesavanja</string>
+    <string name="fragment_detal_action_about">O Aplikaciji</string>
+    <string name="fragment_detal_action_settings">Podesavanja</string>
+    <string name="dialog_about_title">O Aplikaciji</string>
+    <string name="dialog_about_yes">OK</string>
+    <string name="dialog_about_no">Otkazi</string>
+    <string name="ok">ok</string>
+    <string name="fragment_detal_action_add">Dodavanje</string>
+</resources>

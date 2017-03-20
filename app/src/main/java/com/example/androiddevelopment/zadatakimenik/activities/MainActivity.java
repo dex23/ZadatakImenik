@@ -1,6 +1,8 @@
 package com.example.androiddevelopment.zadatakimenik.activities;
 
 import android.app.Dialog;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
@@ -15,12 +18,16 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import java.util.Map;
+import java.util.Set;
 
 import com.example.androiddevelopment.zadatakimenik.R;
 import com.example.androiddevelopment.zadatakimenik.db.ORMLightHelper;
 import com.example.androiddevelopment.zadatakimenik.db.model.Kontakti;
 import com.example.androiddevelopment.zadatakimenik.dialogs.AboutDialog;
 import com.j256.ormlite.android.apptools.OpenHelperManager;
+
+import java.sql.SQLException;
 
 import static com.example.androiddevelopment.zadatakimenik.R.xml.preferences;
 
@@ -57,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
 //            statusMessage(message);
 //        }
 //    }
+    private void statusMessage(String message){
+        NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.drawable.ic_notif_icon);
+        builder.setContentTitle("pripremni test");
+        builder.setContentText(message);
+        notificationManager.notify(1, builder.build());
+    }
 
 
     @Override
@@ -87,10 +102,16 @@ public class MainActivity extends AppCompatActivity {
 //
 //                        try {
 //                            getDatabaseHelper().getKontaktiDao().create(k);
-//                            showMessage()
+//                            showMessage("Dodat kontakt");
+//                            refresh();
+//                        } catch (SQLException e) {
+//                            e.printStackTrace();
 //                        }
+//                        dialog.dismiss();
 //                    }
 //                }
+//        }
+
 
 
             case R.id.action_settings:

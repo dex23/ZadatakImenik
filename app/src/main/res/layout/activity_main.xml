@@ -21,5 +21,15 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <TextView
+        android:id="@+id/tv_listaKontakta"
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Lista kontakta" />
+
 
 </android.support.design.widget.CoordinatorLayout>

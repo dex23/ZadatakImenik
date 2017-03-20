@@ -1,10 +1,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.androiddevelopment.zadatakimenik.MainActivity">
+    tools:context="com.example.androiddevelopment.zadatakimenik.activities.MainActivity">
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/fragment_detal_action_about"
+        android:icon="@drawable/ic_action_about"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:title="@string/fragment_detal_action_settings"
+        android:icon="@drawable/ic_action_settings"
+        app:showAsAction="withText" />
+
 </menu>
